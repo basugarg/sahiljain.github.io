@@ -1,0 +1,62 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:500);
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family:Roboto;
+}
+
+.top {
+	background-color: rgb(25,25,25);
+	display:block;
+	padding:0;
+	margin:0;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	box-shadow: 0px 0px 5px black, 0px 0px 20px black;
+	/*height:700px;*/
+
+}
+
+.name {
+	padding-top: 300px;
+	padding-left: 20px;
+	font-size:180px;
+	color: rgb(250,250,250);
+	text-shadow: 6px 6px 30px black;
+	cursor:default;
+
+}
+
+.nav {
+	border: 2px solid white;
+	margin: 10px 20px 10px 30px;
+	padding: 5px 20px 5px 20px;
+	letter-spacing: 1px;
+	display: inline-block;
+	font-size:25px;
+	color: white;
+	transition: all 0.1s;
+	cursor: pointer;
+
+}
+
+/*#me {
+	color: rgb(182,227,172);
+}*/
+
+.nav:hover {
+	background-color: rgb(30,30,30);
+	box-shadow: 0px 0px 10px rgba(240,240,255,0.5), 2px 2px 50px black;
+
+}
+
+.menu {
+	position: fixed;
+	background-color: rgb(25,25,25);
+	width: 100%;
+	padding: auto;
+	bottom: 20px;
+	display:block;
+}
