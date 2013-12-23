@@ -1,0 +1,33 @@
+@import url("/css/bootstrap-yeti.css");
+@import url("/css/font-awesome.min.css");
+
+.navbar {
+	box-shadow: 0px 0px 10px rgb(30,30,30);
+}
+
+.navbar-default .navbar-nav > li > * {
+	transition: all 0.15s;
+}
+
+.navbar-default .navbar-nav:not(.navbar-right) > li:not(.active) > *:hover,
+.navbar-nav .active *
+{
+	padding-bottom: 9px;
+	border-bottom: 3px solid #00d5ff;
+}
+
+.nav.navbar-nav.navbar-right > li > *:hover{
+	color:red;
+	background-color: #333333;
+}
+
+.navbar-nav.navbar-right > li > a {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  line-height: 21px;
+}
+
+
+.navbar-right > li > a > .fa {
+	font-size: 25px;
+}
