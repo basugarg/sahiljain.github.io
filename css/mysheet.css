@@ -9,15 +9,35 @@
 	transition: all 0.15s;
 }
 
-.navbar-default .navbar-nav:not(.navbar-right) > li:not(.active) > *:hover,
-.navbar-nav .active *
+.navbar-left > li > *:hover,
+.navbar-left .active a
 {
 	padding-bottom: 9px;
 	border-bottom: 3px solid #00d5ff;
 }
 
-.nav.navbar-nav.navbar-right > li > *:hover{
-	color:red;
+.nav.navbar-nav.navbar-right > li:nth-child(1) > *:hover{
+	color:#3B5998;
+	background-color: #333333;
+}
+
+.nav.navbar-nav.navbar-right > li:nth-child(2) > *:hover{
+	color:#33CCFF;
+	background-color: #333333;
+}
+
+.nav.navbar-nav.navbar-right > li:nth-child(3) > *:hover{
+	color:#4875B4;
+	background-color: #333333;
+}
+
+.nav.navbar-nav.navbar-right > li:nth-child(4) > *:hover{
+	color:black;
+	background-color: #333333;
+}
+
+.nav.navbar-nav.navbar-right > li:nth-child(5) > *:hover{
+	color:#ff5e00;
 	background-color: #333333;
 }
 
