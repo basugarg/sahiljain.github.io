@@ -11,7 +11,7 @@
     <title>Sahil Jain's website</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/css/mysheet.css" rel="stylesheet">
+    <link href="/css/mysheet.css?b=1" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <!--<link href="starter-template.css" rel="stylesheet">-->
@@ -24,18 +24,29 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
   </head>
 
   <body>
-  <nav page="0"></nav>
+  <!--<nav page="0"></nav>-->
+  
+  <script>
+  $(document).ready(function($) {
+    $(".home-links-bar").load("/home-links-bar.html");
+  });
+    
+  </script>
 
     <div class="container">
 
-      <div class="page-header text-center row" id="banner">
-        <h1>Sahil Jain</h1>
-      </div>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+
+
+            <div class="page-header text-center">
+              <h1 class="name">Sahil Jain</h1>
+            </div>
+            <div class="home-links-bar text-center"></div>
+
       
 
     </div><!-- /.container -->
@@ -44,9 +55,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/my_navigation_bar.js"></script>
+
     
   </body>
 </html>
