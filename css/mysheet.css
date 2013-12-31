@@ -163,11 +163,13 @@
 
 .grid figcaption {
 	position: absolute;
-	top: 0;
+	top: 0px;
 	left: 0;
 	padding: 20px;
-	background: #2c3f52;
-	color: #ed4e6e;
+	border-top: 1px solid white;
+	background: black;
+	color: #00A4C4;
+	/* ed4e6e;*/
 }
 
 .grid figcaption h3 {
@@ -182,7 +184,7 @@
 	padding: 5px 10px;
 	border-radius: 2px;
 	display: inline-block;
-	background: #ed4e6e;
+	background: #00A4C4;
 	color: #fff;
 }
 
