@@ -1,8 +1,23 @@
 @import url("/css/bootstrap-yeti.css");
 @import url("/css/font-awesome.min.css");
 
+
+.container-fluid {
+	margin-right: 20%;
+ 	margin-left: 8%;
+  	max-width: 1000px; /* or 950px */
+}
+
+.big-space {
+	line-height: 1.8em;
+}
+
+.panel {
+	max-width: 900px;
+}
+
 .navbar {
-	box-shadow: 0px 0px 10px rgb(30,30,30);
+	box-shadow: 0px 0px 3px rgb(30,30,30);
 }
 
 .navbar-default .navbar-nav > li > * {
