@@ -3,9 +3,15 @@
 
 
 .container-fluid {
-	margin-right: 20%;
- 	margin-left: 8%;
-  	max-width: 1000px; /* or 950px */
+	margin: auto;
+  	max-width: 800px; /* or 950px */
+}
+
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
 }
 
 .big-space {
