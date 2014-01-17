@@ -13,8 +13,6 @@
     <!-- Bootstrap core CSS -->
     <link href="/css/mysheet.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <!--<link href="starter-template.css" rel="stylesheet">-->
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -24,20 +22,11 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+
   </head>
 
   <body>
-  <!--<nav page="0"></nav>-->
   
-  <script>
-  $(document).ready(function($) {
-    $(".home-links-bar").load("/home-links-bar.html");
-  });
-    
-  </script>
-
     <div class="container">
 
 
@@ -48,9 +37,13 @@
               <h3>1B Software Engineering <strong>·</strong> University of Waterloo</h3>
             </div>
             
-            <div class="home-links-bar text-center"></div>
-
-      
+            <div class="home-links-bar text-center">
+              <span><a href="/me/"><span class="glyphicon glyphicon-user"></span></a><figcaption class="unselectable">Profile&nbsp;</figcaption></span>
+              <span><a href="/projects/"><span class="fa fa-code"></span></a><figcaption class="unselectable">Projects&nbsp;</figcaption></span>
+              <span><a href="/blog/"><span class="fa fa-pencil"></span></a><figcaption class="unselectable">Blog&nbsp;</figcaption></span>
+              <span><a href="/media/Sahil_Jain_Resume.pdf" target="_blank"><span class="fa fa-file-text-o"></span></a><figcaption class="unselectable">Resumé&nbsp;</figcaption></span>
+              <span><a href="/contact/"><span class="fa fa-envelope"></span></a><figcaption class="unselectable">Contact Me&nbsp;</figcaption></span>
+            </div>
 
     </div><!-- /.container -->
 
@@ -58,7 +51,8 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     
   </body>
 </html>
