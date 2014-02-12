@@ -1,11 +1,13 @@
-var canvasWidth, canvasHeight;
-var stickWidth = 15;
+var canvasWidth, canvasHeight = 400;
+var stickWidth = 10;
 var stickGap = 10;
+var VolumeHeight = 75;
+var stockHeight = canvasHeight - VolumeHeight;
+var stockList = ["MMM","AXP","T","BA","CAT","CVX","CSCO","KO","DD","XOM","GE","GS","HD","INTC","IBM","JNJ","JPM","MCD","MRK","MSFT","NKE"];
 
 $(document).ready(function($) {
 
 	canvasWidth = $(window).width()-3*parseInt($("canvas").css("margin-right"));
-	canvasHeight = 600;
 
 	document.getElementById("canvas").width = canvasWidth;
 	document.getElementById("canvas").height = canvasHeight;
@@ -47,30 +49,25 @@ $(document).ready(function($) {
 			}else{
 				alert("Could not find " + ticker);
 			}
-		
-
-
-		
 	});
 	});
-
-
-	
-
 
 });
 
-function drawCandles(canvas, quotes){
+function drawCandles(canvas, totalquotes){
 	//iterate through these 1 by 1, right to left, start drawing from right
 	//scale each candle 1 by 1
 	//make min the bottom, max the top
 
 	//height/(max-min) = pixels per dollar
 	//canvas.strokeRect(50,50,10,2);
-	quotes = quotes.slice(0,70);
+	var quotes = totalquotes.slice(0,70);
 
-	var min = quotes[0].Low;
-	var max = quotes[0].High;
+	var min = parseFloat(quotes[0].Low);
+	var max = parseFloat(quotes[0].High);
+	var volumes = new Array();
+	//var maxVol = quotes[0].Volume;
+	//console.log("maxvol: " + maxVol);
 		
 	for(var i = quotes.length - 1; i >=0 ; i--){
 		//alert(data.query.results.quote[0].Close);
@@ -78,44 +75,87 @@ function drawCandles(canvas, quotes){
 		//if(quotes[i].High > max) max = quotes[i].High;
 		//$(".data").append(quotes[i].Date + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:" + quotes[i].Close + "<br>");
 
-		min = Math.min(min, quotes[i].Open, quotes[i].Close, quotes[i].High, quotes[i].Low);
-		max = Math.max(max, quotes[i].Open, quotes[i].Close, quotes[i].High, quotes[i].Low);
+		min = Math.min(min, parseFloat(quotes[i].Low));
+		max = Math.max(max, parseFloat(quotes[i].High));
+		//maxVol = Math.max(maxVol, quotes[i].Volume);
+		volumes.push(parseInt(quotes[i].Volume));
 
 	}
+
+	//draw the prices and stuff here
+	canvas.textAlign = "right";
+
+
+
+
+
+	console.log(typeof(volumes[0]));
+	volumes.sort(function(a,b){return a-b});
+	var maxVol = volumes[volumes.length-1];
+	console.log("maxvold is " + maxVol);
+	var IQR = volumes[Math.ceil(volumes.length*3/4)]-volumes[Math.floor(volumes.length*1/4-1)];
+	var threshold = 3*IQR+volumes[Math.floor(volumes.length*3/4-1)];
+	//so now if a volume is above threshold, then it's an outlier
+
+
+	//console.log("maxvol: " + maxVol);
 	//alert ("min and max, " + min + " " + max);
-	var coeff = canvasHeight/(max-min);
+	var coeff = stockHeight/(max-min);
 	var curX = canvasWidth - stickWidth;
 	canvas.beginPath();
+	canvas.strokeStyle = "white";
+	canvas.moveTo(0,stockHeight);
+	canvas.lineTo(canvasWidth,stockHeight);
+	canvas.stroke();
 	for (var i = 0; i  < quotes.length ; i++) {
 			
 			curX -= stickWidth + stickGap;
 			if(curX < 1) break;
-			console.log("i: " + i);
-			var closePix = (quotes[i].Close-min)*coeff;
-			var highPix = (quotes[i].High-min)*coeff;
-			var lowPix = (quotes[i].Low-min)*coeff;
-			var openPix = (quotes[i].Open-min)*coeff;
-			console.log("i, close, high, low, open " + i + " " + closePix + " " + highPix + " " + lowPix + " " + openPix);
+			var closePix = (parseFloat(quotes[i].Close)-min)*coeff;
+			var highPix = (parseFloat(quotes[i].High)-min)*coeff;
+			var lowPix = (parseFloat(quotes[i].Low)-min)*coeff;
+			var openPix = (parseFloat(quotes[i].Open)-min)*coeff;
+			var lineX = curX + stickWidth/2;
+			var pos = closePix >= openPix;
+			canvas.strokeStyle = "white";
+			canvas.fillStyle = "white";
 
-			if(closePix >= openPix){//drawing a positive bar
-				canvas.fillStyle = "white";
-				canvas.fillRect(curX,canvasHeight-closePix, stickWidth,closePix-openPix);
+			if(quotes[i].Volume > threshold){
+				if(pos){
+					canvas.strokeStyle = "green";
+					canvas.fillStyle = "green";
+				}else{
+					canvas.strokeStyle = "red";
+				}
+			}
+
+			if(pos){//drawing a positive bar
+				canvas.beginPath();
+				//canvas.fillStyle = "white";
+				//canvas.strokeStyle = "white";
+				canvas.fillRect(curX,stockHeight-closePix, stickWidth,closePix-openPix);
 				//draw high and low bar
-				canvas.moveTo(curX + stickWidth/2, canvasHeight-lowPix);
-				canvas.lineTo(curX + stickWidth/2, canvasHeight-highPix);
+				canvas.moveTo(lineX, stockHeight-lowPix);
+				canvas.lineTo(lineX, stockHeight-highPix);
 
 			}else{//negativebar
-				canvas.strokeStyle = "white";
-				canvas.strokeRect(curX,canvasHeight-openPix, stickWidth,openPix-closePix);
-				canvas.moveTo(curX + stickWidth/2, canvasHeight-lowPix);
-				canvas.lineTo(curX + stickWidth/2, canvasHeight-closePix);
-				canvas.moveTo(curX + stickWidth/2, canvasHeight-openPix);
-				canvas.lineTo(curX + stickWidth/2, canvasHeight-highPix);
+				canvas.beginPath();
+				//canvas.strokeStyle = "white";
+				canvas.strokeRect(curX,stockHeight-openPix, stickWidth,openPix-closePix);
+				canvas.moveTo(lineX, stockHeight-lowPix);
+				canvas.lineTo(lineX, stockHeight-closePix);
+				canvas.moveTo(lineX, stockHeight-openPix);
+				canvas.lineTo(lineX, stockHeight-highPix);
 			}
 			canvas.stroke();
 
 
-
+			
+				canvas.beginPath();
+				canvas.moveTo(lineX,canvasHeight);
+				canvas.lineTo(lineX, canvasHeight - VolumeHeight*(parseInt(quotes[i].Volume)/maxVol));
+				//console.log("vol: " + quotes[i].Volume + " max is " + maxVol);
+				canvas.stroke();
 			//canvas.strokeRect(canvasWidth - i*stickWidth-stickWidth - (i)*stickGap,canvasHeight-closePix, stickWidth,2);
-	};
+	}
 }
