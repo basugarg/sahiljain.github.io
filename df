@@ -1,0 +1,205 @@
+[33mcommit 5d6d3572f363d1d4b00bcd28803e8ea7220d3719[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Tue Feb 18 03:02:58 2014 -0500
+
+    improved medalrank
+
+[33mcommit ebb3851bee92cacb7608bb89034acc2f5588111a[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Mon Feb 17 03:48:47 2014 -0500
+
+    added watisopen application
+
+[33mcommit c3e7f70663460032c1c2d6d4bfec0b10e13cb018[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Mon Feb 17 03:03:00 2014 -0500
+
+    converted to using kimono's sochi api
+
+[33mcommit 1c68887cb8250e6c2aeb181632f047dab54ec01e[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Sun Feb 16 12:47:46 2014 -0500
+
+    Improved medalrank
+
+[33mcommit b6cdd0e63ad179cdcbe70211f20b7ea9ff441e7c[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Sun Feb 16 02:11:14 2014 -0500
+
+    Added medalrank project
+
+[33mcommit da4be20d15bacb609de587cabc9bf45892d6e7ec[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Wed Feb 12 00:25:33 2014 -0500
+
+    Edited stock display project
+
+[33mcommit efd6f3148477962b0deb75045aa8c9098c896816[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Wed Feb 5 20:40:52 2014 -0500
+
+    moved analytics to the head in html
+
+[33mcommit ad7e7fd6cccff477679c39c0261c7c20dac889ec[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Wed Feb 5 20:30:57 2014 -0500
+
+    added analytics
+
+[33mcommit 600fa0b78930573eb8bb2d5e84d014e91b5a461f[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Wed Feb 5 18:51:57 2014 -0500
+
+    added unlisted project, going to move it soon
+    
+    should be on a separate github pages
+
+[33mcommit deac4b12c6e40b221e8b52c7db205d57f0f30d76[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Mon Jan 27 01:01:53 2014 -0500
+
+    Added favicon/footer, changed project
+
+[33mcommit cb4d853bca6d8f21ca1471d4b553f6da78e32df7[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Mon Jan 20 14:20:27 2014 -0500
+
+    Fixed spelling mistakes, improved résumé
+
+[33mcommit 0072fbce446815c77ead9d4a4c7f665123d685e0[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Fri Jan 17 01:23:34 2014 -0500
+
+    Speeded up load-time by replacing Javascript lines with hardcoded html
+
+[33mcommit d478d03c10c947451b639c557c05aedb11ad2f8f[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Tue Jan 14 13:56:20 2014 -0500
+
+    Added project descriptions
+
+[33mcommit d18b3fb4ce559452933d716a3105de79a4f6d350[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Sat Jan 11 14:53:11 2014 -0500
+
+    Added profile page
+
+[33mcommit feb9b1148f923bbbabbc33d12659e9b011d9bbe4[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Fri Jan 10 14:37:51 2014 -0500
+
+    Fixed shaking on homepage, added subtitle
+
+[33mcommit c13d446a8caf17eb681fc3d4e71084a2b82c3432[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Mon Jan 6 23:49:20 2014 -0500
+
+    Improved homepage, added project pages, added disqus, changed panels on blog
+
+[33mcommit 8a4d5ed7327bc8dcfd1c45822a009b5cc5a61804[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Sun Jan 5 20:02:56 2014 -0500
+
+    Added first blog-post
+
+[33mcommit 6b65684a394a450741e03bf3dd9e9d2b011bbf0a[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Tue Dec 31 01:15:48 2013 -0500
+
+    Changed Projects images
+
+[33mcommit 53589452b63891f5e5d832d8ca9c1397cca39eeb[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Sun Dec 29 03:05:57 2013 -0500
+
+    added cname, changed homepage
+
+[33mcommit 5ef9972cf33c2b7b6ca477c0a153d8360f7875a8[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Mon Dec 23 22:58:35 2013 -0500
+
+    Changed navbar colours
+
+[33mcommit 307206611c183d2c9622f98df5daf2a79e08defa[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Mon Dec 23 02:18:58 2013 -0500
+
+    improved navbar greatly
+
+[33mcommit 755cb59fc2b62b539b69d031e3c048b2b7717b5a[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Sun Dec 22 20:12:21 2013 -0500
+
+    Improved yeti
+
+[33mcommit ec95a1ebcf56c8a4154d0c459c827f47d872fb22[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Sun Dec 22 19:45:43 2013 -0500
+
+    added theme yeti
+
+[33mcommit cb27efba56a47087e0469fd38b218dbc2e6ebba0[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Sun Dec 22 19:22:34 2013 -0500
+
+    changed links
+
+[33mcommit 6ed60e31cd8b150a680c6e3872cebcb5db2c25f7[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Sun Dec 22 19:09:28 2013 -0500
+
+    changed navbar
+
+[33mcommit 92d3d7f820100157b5857d1500482ca2b5c1fd2a[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Sun Dec 22 18:54:33 2013 -0500
+
+    implemented basic bootstrap
+
+[33mcommit 2b9ca1779355fa209035fae62c477005b6ecca54[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Sun Dec 22 18:52:16 2013 -0500
+
+    Changed folders up
+
+[33mcommit c2ccc13abcff5dccb02f4ce5334062f760e8a0cf[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Sat Dec 21 22:28:29 2013 -0500
+
+    Added jquery and css
+
+[33mcommit fc2ba398f26e195f26b18b21d1033fe55944732b[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Sat Dec 21 20:04:44 2013 -0500
+
+    Create README.md
+
+[33mcommit e78ef46fd4d8976801a17a3fd9ea122c72bcc4ce[m
+Author: Sahil Jain <sahil.jain@live.ca>
+Date:   Wed Aug 28 10:53:43 2013 -0400
+
+    Delete CNAME
+
+[33mcommit 6a119daf6e07a1050f9b68488d4fff6e6486a6dc[m
+Author: sahiljain <sahil.jain@live.ca>
+Date:   Wed Aug 28 03:30:37 2013 -0400
+
+    added CNAME
+
+[33mcommit e1f437461dedfdf7b5ea582c13ea9ade39b87352[m
+Author: sahiljain <sahil.jain@live.ca>
+Date:   Wed Aug 28 03:18:16 2013 -0400
+
+    edited links to be absolute
+
+[33mcommit d8bda9b70b2be59ac23763264635064db77bb1d2[m
+Author: sahiljain <sahil.jain@live.ca>
+Date:   Wed Aug 28 03:09:35 2013 -0400
+
+    added 2 links
+
+[33mcommit 93b1a5e243eaaba28cc2a13c6f6d96c28f7583d1[m
+Author: sahiljain <sahil.jain@live.ca>
+Date:   Wed Aug 28 02:56:38 2013 -0400
+
+    Add index.html

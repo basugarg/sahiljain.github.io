@@ -17,21 +17,21 @@ function kimonoCallback(data) {
     	return;
     }
 		for (var i = 0; i < countries.length; i++) {
-			var score = countries[i].Gold*goldWorth+countries[i].Bronze*bronzeWorth+countries[i].Silver*silverWorth;
+			var score = countries[i].gold*goldWorth+countries[i].bronze*bronzeWorth+countries[i].silver*silverWorth;
 			countries[i]["score"] = score;
 		};
 		countries.sort(function(a,b){
 			return b["score"] - a["score"];
 		});
 		for (var i = 0; i <  countries.length;i++) {
-			$(".table").append("<tr><td>" + (i+1) + "</td><td>" + countries[i]["Country"]["text"] + "</td><td>" +  countries[i]["Gold"] + "</td><td>" + countries[i]["Silver"] + "</td><td>" + countries[i]["Bronze"] + "</td><td>" + countries[i]["score"] + "</td></tr>");
+			$(".table").append("<tr><td>" + (i+1) + "</td><td><a href='" + countries[i]["country"]["href"] + "' target=_blank>" + countries[i]["country"]["text"] + "</a></td><td>" +  countries[i]["gold"] + "</td><td>" + countries[i]["silver"] + "</td><td>" + countries[i]["bronze"] + "</td><td>" + countries[i]["score"] + "</td></tr>");
 		};
 		$(".load").hide();
 		$(".table").show();
 }
 
 $.ajax({
-    "url":"http://www.kimonolabs.com/api/5cvbjyj4?apikey=1951128d06008e5342058ed90cd155de&callback=kimonoCallback",
+    "url":"http://www.kimonolabs.com/api/5u6ystt4?apikey=1951128d06008e5342058ed90cd155de&callback=kimonoCallback",
     "crossDomain":true,
     "dataType":"jsonp",
   
