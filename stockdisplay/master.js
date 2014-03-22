@@ -26,16 +26,15 @@ $(document).ready(function($) {
 
 		var today = new Date();
 		var twoDigitMonth = ((today.getMonth()>8))? (today.getMonth()+1) : '0' + (today.getMonth()+1);
-		var twoDigitDay = ((today.getDate().length+1) === 1)? (today.getDate()) : '0' + (today.getDate());
+		var twoDigitDay = (today.getDate() > 9)? (today.getDate()) : '0' + (today.getDate());
 		var currentDateString = today.getFullYear() + "-" + twoDigitMonth + "-" + twoDigitDay;
-
 		var old = new Date();
 		old.setDate(today.getDate()-105);
 		//console.log("old get month length is " + old.getMonth());
 		var twoDigitMonth = ((old.getMonth()>8))? (old.getMonth()+1) : '0' + (old.getMonth()+1);
 		var twoDigitDay = ((old.getDate().length+1) === 1)? (old.getDate()) : '0' + (old.getDate());
 		var oldDateString = old.getFullYear() + "-" + twoDigitMonth + "-" + twoDigitDay;
-
+		
 		//alert("today is " + currentDateString + "and it was " + oldDateString);
 		var url = "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.historicaldata%20where%20symbol%20%3D%20%22"+ticker+"%22%20and%20startDate%20%3D%20%22" + oldDateString + "%22%20and%20endDate%20%3D%20%22" + currentDateString + "%22&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=?";
 		$.getJSON(url, null, function(data){
@@ -43,7 +42,7 @@ $(document).ready(function($) {
 			
 			if(data.query.results){
 				var quotes = data.query.results.quote;
-				console.log(quotes);
+				
 				canvas.clearRect(0,0,canvasWidth,canvasHeight);
 				drawCandles(canvas, quotes);
 			}else{
@@ -84,15 +83,8 @@ function drawCandles(canvas, totalquotes){
 
 	//draw the prices and stuff here
 	canvas.textAlign = "right";
-
-
-
-
-
-	console.log(typeof(volumes[0]));
 	volumes.sort(function(a,b){return a-b});
 	var maxVol = volumes[volumes.length-1];
-	console.log("maxvold is " + maxVol);
 	var IQR = volumes[Math.ceil(volumes.length*3/4)]-volumes[Math.floor(volumes.length*1/4-1)];
 	var threshold = 3*IQR+volumes[Math.floor(volumes.length*3/4-1)];
 	//so now if a volume is above threshold, then it's an outlier
