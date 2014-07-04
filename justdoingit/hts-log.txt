@@ -1,0 +1,27 @@
+HTTrack3.48-13+htsswf+htsjava launched on Thu, 03 Jul 2014 21:59:42 at http://justdoingit.ca +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://justdoingit.ca -O1 "C:\My Web Sites\Just doing it 1" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+22:10:08	Error: 	"Not Found" (404) at link justdoingit.ca/wp-content/themes/tdminimal/fonts/glyphicons-halflings-regular.eot (from justdoingit.ca/wp-content/themes/tdminimal/css/bootstrap.min.css?ver=3.9)
+22:10:08	Error: 	"Not Found" (404) at link justdoingit.ca/wp-content/themes/tdminimal/fonts/glyphicons-halflings-regular.eot? (from justdoingit.ca/wp-content/themes/tdminimal/css/bootstrap.min.css?ver=3.9)
+22:10:08	Error: 	"Not Found" (404) at link justdoingit.ca/wp-content/themes/tdminimal/fonts/glyphicons-halflings-regular.woff (from justdoingit.ca/wp-content/themes/tdminimal/css/bootstrap.min.css?ver=3.9)
+22:10:08	Error: 	"Not Found" (404) at link justdoingit.ca/wp-content/themes/tdminimal/fonts/glyphicons-halflings-regular.ttf (from justdoingit.ca/wp-content/themes/tdminimal/css/bootstrap.min.css?ver=3.9)
+22:10:08	Error: 	"Not Found" (404) at link justdoingit.ca/wp-content/themes/tdminimal/fonts/glyphicons-halflings-regular.svg (from justdoingit.ca/wp-content/themes/tdminimal/css/bootstrap.min.css?ver=3.9)
+22:10:09	Error: 	"Not Found" (404) at link justdoingit.ca/?p=34 (from justdoingit.ca/about/)
+22:10:12	Error: 	"Not Found" (404) at link justdoingit.ca/?p=76 (from justdoingit.ca/whatcanidoforyou/)
+22:14:02	Error: 	"Not Found" (404) at link justdoingit.ca/?p=212 (from justdoingit.ca/thegaragesale/)
+22:14:02	Error: 	"Not Found" (404) at link justdoingit.ca/?p=141 (from justdoingit.ca/7days/)
+22:14:02	Error: 	"Not Found" (404) at link justdoingit.ca/?p=185 (from justdoingit.ca/hungerweeek14/)
+22:14:02	Error: 	"Not Found" (404) at link justdoingit.ca/?p=138 (from justdoingit.ca/book-now/)
+22:14:02	Error: 	"Not Found" (404) at link justdoingit.ca/?p=33 (from justdoingit.ca/checkout/purchase-history/)
+22:14:02	Error: 	"Not Found" (404) at link justdoingit.ca/?p=98 (from justdoingit.ca/cart/)
+22:14:13	Error: 	"Not Found" (404) at link justdoingit.ca/blog/mediaelement.min.js (from justdoingit.ca/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=2.14.2)
+22:14:13	Error: 	"Not Found" (404) at link justdoingit.ca/blog/mediaelement-and-player.js (from justdoingit.ca/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=2.14.2)
+22:14:13	Error: 	"Not Found" (404) at link justdoingit.ca/?p=32 (from justdoingit.ca/checkout/transaction-failed/)
+
+HTTrack Website Copier/3.48-13 mirror complete in 14 minutes 32 seconds : 154 links scanned, 137 files written (27318434 bytes overall) [21560099 bytes received at 24724 bytes/sec], 7681800 bytes transferred using HTTP compression in 86 files, ratio 21%, 5.9 requests per connection
+(16 errors, 0 warnings, 0 messages)
