@@ -60,6 +60,7 @@
 <script type='text/javascript' src='wp-content/plugins/wordpress-social-stream/js/jquery.social.stream.wall.1.37868.js?ver=3.9'></script>
 <script type='text/javascript' src='wp-content/plugins/wordpress-social-stream/js/jquery.social.stream.1.5.4.min7868.js?ver=3.9'></script>
 <script type='text/javascript' src='wp-content/themes/tdminimal/js/jquery.isotope.min9c39.js?ver=201301'></script>
+<script type='text/javascript' src='wp-content/themes/tdminimal/js/bootstrap.min.js'></script>
 <script type='text/javascript' src='wp-content/themes/tdminimal/js/jquery.isotope.sloppy-masonry.min9c39.js?ver=201301'></script>
 <script type='text/javascript' src='wp-content/themes/tdminimal/js/jquery.bxslider.min9c39.js?ver=201301'></script>
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
@@ -185,11 +186,13 @@
 <body class="home page page-id-67 page-template-default">
 
 
+
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 	<div class="container">
+
 		<div class="site-branding">
-			
+				
 				<div class="website-logo">
 					<a href="index.html" title="JUSTDOINGIT" rel="home">
 						<img src="wp-content/uploads/2014/05/justdoingit-w-slogan2.png" alt="JUSTDOINGIT">
@@ -198,6 +201,22 @@
 			 					</div>
 	
 		<nav id="site-navigation" class="main-navigation clearfix" role="navigation">
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        This is a modal where you can easily attract the user's attention.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 			<h1 class="menu-toggle">Menu <i class="fa fa-reorder"></i></h1>
 							<ul id="menu-menu" class="nav-bar"><li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-67 current_page_item menu-item-has-children menu-item-150"><a title="HOME" href="index.html">HOME</a>
 <ul class="sub-menu">
@@ -230,11 +249,17 @@
 		</nav><!-- #site-navigation -->
 	</div><!-- .container -->
 </header><!-- #masthead -->	
-		
+
+
+
+<div class="alert alert-info" role="alert">
+  <strong>Warning! <a href="#" class="alert-link">This is a call to action!</a></strong>
+</div>
 		
 	<div id="content" class="site-content">
 
 <div class="container">
+
 	<div class="row">	
 		<div id="primary" class="content-area col-lg-12 col-md-12">
 			<div id="main" class="site-main" role="main">
@@ -247,6 +272,8 @@
 			<span></span>
 		</h2>
 	</header><!-- .entry-header -->
+
+
 	<div class="hentry-inner">
 		<div class="entry-content">
 			<pre style="text-align: justify;"><span style="font-family: 'arial black', 'avant garde'; word-break: normal;"><strong><span style="font-size: 24pt;"><span style="color: #ff0000;">J</span><span style="color: #000000;">D</span><span style="color: #ff0000;">I</span></span><span style="color: #808080;"> </span><span style="font-size: 12pt;"><span style="color: #808080;">is a thought-provoking platform. We believe you have a unique purpose here on Earth and it is our mission to get you to bring that to the world. The idea isn't to get you to do a particular task, but to help you see things from another angle and then another angle, and another. If we can change the way you think, we can't help but change the</span></span></strong></span><span style="font-family: 'arial black', 'avant garde'; word-break: normal;"><strong><span style="font-size: 12pt;"><span style="color: #808080;"> th</span></span></strong></span><span style="font-family: 'arial black', 'avant garde'; word-break: normal;"><strong><span style="font-size: 12pt;"><span style="color: #808080;">ings</span></span></strong></span><span style="font-family: 'arial black', 'avant garde'; word-break: normal;"><strong><span style="font-size: 12pt;"><span style="color: #808080;"> you do</span><span style="color: #ff0000;"><span style="font-size: 18pt;">.</span><a href="http://twitter.com/@mrjagsingh" target="_blank"><span style="color: #000000;"> #<span style="font-size: 14pt;">JUSTDO</span></span></a></span><a href="http://twitter.com/@mrjagsingh" target="_blank"><span style="font-size: 14pt;"><span style="color: #ff0000;">ING</span><span style="color: #000000;">IT</span></span></a></span></strong></span></pre>
@@ -311,6 +338,7 @@
   	jQuery(document).on('ready',function() {
   		jQuery('body').css('background', "#0f0f0f");
   		jQuery('body').find('.backstretch').addClass('single-post-bg-image');
+  		jQuery('#myModal').modal('show');
   	});
   	</script>
   	<script type='text/javascript' src='wp-content/themes/tdminimal/js/navigation11a8.js?ver=20120206'></script>
