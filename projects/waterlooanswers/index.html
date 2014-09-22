@@ -9,7 +9,7 @@
     <meta name="Sahil Jain" content="">
 
     <link href="/media/favicon.png" rel="shortcut icon">
-    <title>WhiteBoard|Sahil Jain</title>
+    <title>WaterlooAnswers | Sahil Jain</title>
 
     <link href="/css/mysheet.css" rel="stylesheet">
 
@@ -48,27 +48,26 @@
     </nav>
 
     <div class="container-fluid">
-
-      
-        <h1 class="page-header">UW WhiteBoard</h1>
+        <h1 class="page-header">WaterlooAnswers</h1>
         <div class="text-center">
         <br>
-         <a href="http://www.uwwhiteboard.com" target="_blank"><button type="button" class="btn btn-primary">View Site</button></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/DogWalkers/whiteboard" target="_blank"><button type="button" class="btn btn-primary">View Source Code</button></a>
-         <br>
-         <br>
-         <br>
+         <a href="http://askuw.sahiljain.ca" target="_blank"><button type="button" class="btn btn-primary">View Site</button></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/sahiljain/WaterlooAnswersAPI" target="_blank"><button type="button" class="btn btn-primary">View Source Code</button></a>
         </div>
+        <br>
+        <h2>Problem</h2>
         <p>
-          This project was created at the <a href="http://hack-waterloo.com/">hackWATERLOO</a> hackathon. Our team consisted of Aditya Sridhar, Ayush Bhagat, and Kaivalya Gandhi. Despite the fact that it was our first time participating in a hackathon, we ended up winning the award for <a href="http://challengepost.com/software/whiteboard">Best Design</a>! I had a great time being fully absorbed into this venture for 24 hours straight, and I gained experience and connections along the way!
+          Many students at the University of Waterloo have questions about school, especially first-years. These questions usually get asked on the Facebook frosh group, and these questions are unorganized, get lost, and get repeatedly asked.
         </p>
+        <br>
+        <h2>Solution</h2>
         <p>
-          We decided to use <a href="http://nodejs.org/">NodeJS</a> for the server, because everyone on the team already had experience with javascript. NodeJS also made it easy to pass JSON data from the server to the client. For the database, we used <a href="http://www.mongodb.org">MongoDB</a>, with <a href="http://mongoosejs.com/">MongooseJS</a> for our schemas. For user authentication, we used a Facebook authentication package called <a href="https://github.com/jaredhanson/passport-facebook">passport-facebook</a>. 
+          This project is a question/answer system, similar to Yahoo Answers. Questions are organized, can be favourited, and can have answers which are favourited. You can organize questions by time, category, number of views, and number of favourites.
         </p>
+        <br>
+        <h2>Stack</h2>
         <p>
-          On the front-end, we used a Bootstrap theme from <a href="http://www.blacktie.co/">BlackTie</a>. We retrieved user's profile photos from <a href="https://developers.facebook.com/docs/graph-api/reference/v2.0">Facebook's Graph API</a>. Our homepage features a beautiful picture of the SLC, taken by <a href="http://www.paulomshah.com/Paulomsite.html">Paulom Shah</a>. I've found that there is great need for a way to connect developers at UW to jobs and projects. Right now, companies and people post jobs in the Computer Science and Engineering Facebook groups, and there is little interaction between the poster and the people in the group. Hopefully Whiteboard can solve this problem in the future!
-        </p>
-        
-      
+          Our server is written in Node.js, with MongoDB as the database. Database interactions are handled through MongooseJS, which handles schemas for MongoDB. Authentication is done using JSON Web Tokens, or JWTs. These tokens are a piece of trivial JSON (ex. a user's username), which are encoded using a server secret. These tokens can be decoded back to JSON easily, but they cannot be produced unless you have the server secret. The server can only read tokens that have been produced with it's own secret. Our client is written in AngularJS.
+        </p> 
 
     </div><!-- /.container -->
 
