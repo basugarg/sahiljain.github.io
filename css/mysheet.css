@@ -280,3 +280,7 @@ p {
 .panel-heading:hover{
 	background-color: #E8E8E8;
 }
+
+::selection {
+	background: #E5E5E5;
+}
