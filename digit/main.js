@@ -8,6 +8,17 @@ var canvas = document.getElementById('canvas'),
 ratio = 100/20;
 
 document.getElementById('clear').addEventListener('click', function() {
+        document.getElementById("guess").innerHTML = "";
+        document.getElementById("one").style.height = "0px";
+        document.getElementById("two").style.height = "0px";
+        document.getElementById("three").style.height = "0px";
+        document.getElementById("four").style.height = "0px";
+        document.getElementById("five").style.height = "0px";
+        document.getElementById("six").style.height = "0px";
+        document.getElementById("seven").style.height = "0px";
+        document.getElementById("eight").style.height = "0px";
+        document.getElementById("nine").style.height = "0px";
+        document.getElementById("zero").style.height = "0px";
         ctx.rect(0,0,20,20);
         ctx.fillStyle="#6E6E6E";
         ctx.fill(); 
@@ -21,6 +32,7 @@ canvas.onmousedown = function(e) {
     var pos = fixPosition(e, canvas);
     mousedown = true;
     ctx.beginPath();
+    ctx.lineCap="round";
     ctx.moveTo(pos.x/ratio, pos.y/ratio);
     return false;
 };
@@ -29,7 +41,7 @@ canvas.onmousemove = function(e) {
     var pos = fixPosition(e, canvas);
     if (mousedown) {
         ctx.lineTo(pos.x/ratio, pos.y/ratio);
-        ctx.strokeStyle = '#606060';
+        ctx.strokeStyle = '#707070';
         ctx.lineWidth = 3;
         ctx.stroke();
         ctx.strokeStyle = '#FFFFFF';
@@ -40,6 +52,9 @@ canvas.onmousemove = function(e) {
 
 
 canvas.onmouseup = function(e) {
+    if (!mousedown) {
+        return;
+    }
     mousedown = false;
     var imgData=ctx.getImageData(0,0,20,20);
     //console.log(imgData);
