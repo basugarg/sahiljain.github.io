@@ -29,8 +29,8 @@ canvas.onmousemove = function(e) {
     var pos = fixPosition(e, canvas);
     if (mousedown) {
         ctx.lineTo(pos.x/ratio, pos.y/ratio);
-        ctx.strokeStyle = '#656565';
-        ctx.lineWidth = 2.5;
+        ctx.strokeStyle = '#606060';
+        ctx.lineWidth = 3;
         ctx.stroke();
         ctx.strokeStyle = '#FFFFFF';
         ctx.lineWidth = 2;
@@ -51,7 +51,7 @@ canvas.onmouseup = function(e) {
         for (var col = 0; col < 20; col++) {
             // val = myArr[(row*20 + col)*4] > 110 ? "X" : "O";
             // str += val + " ";
-            featureVector.push((myArr[(col*20 + row)*4] - 110)/ 255);
+            featureVector.push((myArr[(col*20 + row)*4] - 110)/ 145);
         }
         // str += "\n";
     }
