@@ -15,8 +15,8 @@ document.getElementById('clear').addEventListener('click', function() {
 
 /*********** handle mouse events on canvas **************/
 var mousedown = false;
-ctx.strokeStyle = '#FFFFFF';
-ctx.lineWidth = 1.5;
+// ctx.strokeStyle = '#FFFFFF';
+// ctx.lineWidth = 2;
 canvas.onmousedown = function(e) {
     var pos = fixPosition(e, canvas);
     mousedown = true;
@@ -29,9 +29,15 @@ canvas.onmousemove = function(e) {
     var pos = fixPosition(e, canvas);
     if (mousedown) {
         ctx.lineTo(pos.x/ratio, pos.y/ratio);
+        ctx.strokeStyle = '#656565';
+        ctx.lineWidth = 2.5;
+        ctx.stroke();
+        ctx.strokeStyle = '#FFFFFF';
+        ctx.lineWidth = 2;
         ctx.stroke();
     }
 };
+
 
 canvas.onmouseup = function(e) {
     mousedown = false;
@@ -91,7 +97,7 @@ canvas.onmouseup = function(e) {
                     }
                     // console.log(A3);
                     var i = A3.indexOf(Math.max.apply(Math, A3));
-                    document.getElementById("guess").innerHTML = ((i+1)%10);
+                    document.getElementById("guess").innerHTML = "Guess: " + ((i+1)%10) + ", Confidence: " + Math.round(A3[i]*100) + "%";
                     document.getElementById("one").style.height = "" + A3[0]*100 + "px";
                     document.getElementById("two").style.height = "" + A3[1]*100 + "px";
                     document.getElementById("three").style.height = "" + A3[2]*100 + "px";
@@ -107,6 +113,8 @@ canvas.onmouseup = function(e) {
         }
     });
 };
+
+canvas.onmouseleave = canvas.onmouseup;
 
 function sigmoid(t) {
     return 1/(1+Math.pow(Math.E, -t));
