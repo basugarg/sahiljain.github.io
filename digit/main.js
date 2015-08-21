@@ -112,7 +112,11 @@ canvas.onmouseup = function(e) {
                     }
                     // console.log(A3);
                     var i = A3.indexOf(Math.max.apply(Math, A3));
-                    document.getElementById("guess").innerHTML = "Guess: " + ((i+1)%10) + ", Confidence: " + Math.round(A3[i]*100) + "%";
+                    var guess = ((i+1)%10) + ", Confidence: " + Math.round(A3[i]*100) + "%";
+                    if (A3[i] < 0.5) {
+                        guess = "???";
+                    }
+                    document.getElementById("guess").innerHTML = "Guess: " + guess ;
                     document.getElementById("one").style.height = "" + A3[0]*100 + "px";
                     document.getElementById("two").style.height = "" + A3[1]*100 + "px";
                     document.getElementById("three").style.height = "" + A3[2]*100 + "px";
