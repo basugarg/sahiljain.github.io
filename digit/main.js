@@ -41,7 +41,7 @@ canvas.onmousemove = function(e) {
     var pos = fixPosition(e, canvas);
     if (mousedown) {
         ctx.lineTo(pos.x/ratio, pos.y/ratio);
-        ctx.strokeStyle = '#707070';
+        ctx.strokeStyle = '#606060';
         ctx.lineWidth = 3;
         ctx.stroke();
         ctx.strokeStyle = '#FFFFFF';
