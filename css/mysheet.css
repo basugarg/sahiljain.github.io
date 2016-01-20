@@ -284,3 +284,15 @@ p {
 ::selection {
 	background: #E5E5E5;
 }
+
+.linkedin-main, .linkedin-main:hover {
+	line-height: 10px;
+	font-size: 50px;
+	color: black;
+}
+
+.github-main, .github-main:hover {
+	line-height: 10px;
+	font-size: 50px;
+	color: black;
+}
