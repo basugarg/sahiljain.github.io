@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Sahil's Website" content="">
+    <meta name="Sahil Jain" content="">
+    <link href="/media/favicon.png" rel="shortcut icon">
+    <title>Chess AI|Sahil Jain</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/mysheet.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!--<link href="starter-template.css" rel="stylesheet">-->
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+<script src="/js/analytics.js"></script>
+  </head>
+
+  <body>
+
+  <nav page="2">
+    <div class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Sahil Jain</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a href="/me/"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Profile</a></li>
+            <li class="active"><a href="/projects/"><span class="fa fa-code"></span>&nbsp;&nbsp;Projects</a></li>
+            <li><a href="http://blog.sahiljain.ca"><span class="fa fa-pencil"></span>&nbsp;&nbsp;Blog</a></li>
+            <li><a href="/media/Sahil_Jain_Resume.pdf" target="_blank"><span class="fa fa-file-text-o"></span>&nbsp;&nbsp;Résumé</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="linkedin"><a href="http://www.linkedin.com/in/SahilJainWaterloo" target="_blank"><span class="fa fa-linkedin-square"></span></a></li>
+            <li class="github"><a href="https://github.com/sahiljain" target="_blank"><span class="fa fa-github-square"></span></a></li>
+            <li class="email"><a href="/contact/"><span class="fa fa-envelope"></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </nav>
+
+    <div class="container-fluid">
+      <h1 class="page-header">A Generalized 2-Player AI</h1>
+      <div class="text-center">
+      <br>
+      <a href="https://github.com/sahiljain/ChessAI" target="_blank"><button type="button" class="btn btn-primary">View Source Code</button></a>
+      <a href="/chess/" target="_blank"><button type="button" class="btn btn-primary">View in Action!</button></a>
+      <br>
+      <br>
+    </div>
+    <p>
+      I've always wanted to build a chess AI that could beat me at the game. Last term my friends and I would play chess, and I would almost always lose. Fed up, I challenged them to a chess AI contest, where we would build our own bots and have them compete (we are programmers after all). I ended up being the only one to actually write an AI.
+    </p>
+    <p>
+      I started by watching <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/lecture-videos/lecture-6-search-games-minimax-and-alpha-beta/" target="_blank">this lecture</a> and building a simple tic-tac-toe program using the minimax algorithm. I added alpha-beta pruning as an optimization, and refactored the code to make the AI logic separate from the game-specific logic. I applied the refactored code to Connect-Four as well. Finally, I implemented chess. You only need to provide 2 functions to apply this AI to a new game: a function which inputs a board and outputs a list of boards that will result form a single move, and an evaluation function which maps a board to an integer value representing the likelihood that player 1 will win.
+    </p>
+    <p>
+      The move generator function is fairly simple for chess: you have to iterate over all the pieces for the current player and translate them in every possible way. The board evaluation function is more interesting: I value the board based on the total value of the material (queen is 9 points, pawns are 1 point, rook is 5 points, etc), the number of moves the other player can make (we want the other player to be as immobile as possible) and the domination (how close are the player's pawns to the opposite side). There are more sophisticated evaluation functions out there, but this was good enough to beat me and my friends.
+    </p>
+    <p>
+      I give the AI 7 seconds per turn, which allows it to search the tree at a depth of 5-10. I used Iterative Deepening to force the search into a time constraint. The deeper the search is able to go, the more accurate the move will be. Given 7 seconds on a micro EC2 instance, the AI is able to defeat the average chess player (myself included). If I were to optimize memory allocation, use multi-threading, and use a larger instance, I could achieve a deeper search. 
+    </p>
+    <p>
+      I deployed the chess AI as a <a href="https://github.com/sahiljain/chess-service" target="_blank">backend service</a> running on an EC2 micro instance. You can play it <a href="/chess/">here</a>.
+    </p>
+  </div><!-- /.container -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <footer class="text-center"><small>Copyright © 2016 Sahil Jain. All Rights Reserved.</small></footer>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
