@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <style>
+  .full {background-color: black; width: 100%; height: 100vh }
+  </style>
+  <title>Blinker</title>
+</head>
+<body>
+  <div class="full" id="full"></div>
+</body>
+<script>
+window.addEventListener('load', function(){
+  document.getElementById('full').addEventListener('touchstart', function(e) {
+    if (document.getElementById('full').style.backgroundColor == 'black') {
+      document.getElementById('full').style.backgroundColor = 'white';
+    } else {
+      document.getElementById('full').style.backgroundColor = 'black';
+    }
+  }, false)
+}, false)
+</script>
+
