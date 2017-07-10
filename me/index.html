@@ -88,10 +88,22 @@
       </div>
       <div class="col-lg-8">
         <p class="no-indent">
-        I'm working on WALT (<a href="https://github.com/google/walt">github.com/google/walt</a>). More details coming soon!
+          I worked on WALT Latency Timer (<a href="https://github.com/google/walt">github.com/google/walt</a>), which is a physical device designed to measure touch, screen, audio, and MIDI latency of Android and ChromeOS devices. WALT allows the round-trip latencies to be broken into separate times. WALT connects to the Android device via USB, and is controlled via an Android app. My main project was around making the Android app more usable and making the test results easily interpreted. It also involved making UI improvements requested by our users.
         </p>
         <p class="no-indent">
-          Technologies used: Android, Java.
+          Previously, the latency would be reported as a median of the samples taken during the test. I developed live histograms which update as test results are gathered, plotting the samples in real-time. I also implemented a chart to plot the screen brightness transition curve as it turns black to white to black, and a scatterplot for the drag latency test to give the user confidence in the algorithm used to calculate the latency.
+        </p>
+        <p class="no-indent">
+          I also created a new type of test to measure accelerometer latency. This is useful for VR applications, where the accelerometer+graphics latency has to be low. Developing this involved cross-correlating the accelerometer signals from the phone and from the WALT device. I also developed a new type of graphics latency measurement to test the fast-path graphics pipeline which is included in newer ChromeOS devices.
+        </p>
+        <p class="no-indent">
+          I also developed end-to-end tests, which calculate the latency between an external input and an external output. This allows WALT to be used to test any device (e.g. iPhone, Windows), without having to develop a native WALT application for each device.
+        </p>
+        <p class="no-indent">
+          Overall, Google is an interesting company, as it is working in almost every area that technology can reach. Their size naturally creates the dilemma of multiple teams solving very similar problems, but having little communication or code-sharing (consider the plethora of messaging apps they have developed). Multiple teams are tackling the problem of measuring physical latency on Android and ChromeOS devices, WALT being one of them. I enjoyed working on open-source software, as well as playing around with the hardware, and I felt I was able to have a significant impact on the project.
+        </p>
+        <p class="no-indent">
+          Technologies used: Android, Java, Python, JavaScript
         </p>
       </div>
     </div>
